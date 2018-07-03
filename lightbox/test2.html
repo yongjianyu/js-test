@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test2</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			border:0; 
+		}
+
+		#container{
+			width: 1000px;
+			height:400px;
+			overflow: hidden;
+			position: relative;
+		}
+		
+		#list {
+            position: absolute;
+            z-index: 1;
+            width: 4000px;
+            height: 400px;
+        }
+		#list img {
+			float: left;
+			width: 1000px;
+			height: 400px;
+		}
+
+		#btn{
+			position:absolute;
+			z-index: 2;
+			height: 10px;
+			width: 200px; 
+			left: 450px;
+			top: 350px;
+		}
+		#btn span{
+			float: left;
+			height: 7px;
+			width: 25px;
+			cursor: pointer;
+			border: 1px solid #fff;
+			background-color: #333;
+			border-radius: 20%;
+			margin-right:10px; 
+		}
+
+		.on{
+			background-color: orangered !important;
+		}
+
+		#prev,
+		#next{
+			display: none;
+			font-size: 20px;
+			font-weight: bold;
+			position: absolute;
+			top: 200px;
+			text-decoration-line: none;
+			color: white;
+			width: 20px;
+			line-height:50px;
+			vertical-align: middle;
+			z-index: 2;
+		}
+
+		#prev{
+			left: 0;
+		}
+		#next{
+			right: 0;
+			text-align: right;
+		}
+
+		#prev:hover,
+		#next:hover{
+			background-color: #525050;
+		}
+
+		#container:hover .arraw{
+			display: block;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		window.onload= function(){
+			var container = document.getElementById('container');
+			var list = document.getElementById('list');
+			var btn = document.getElementById('btn').getElementsByTagName('span');
+			var prev = document.getElementById('prev');
+			var next = document.getElementById('next');
+			var index = 1;
+			var time;
+
+			function slide(n){
+				var newleft = parseInt(list.style.left)+n;
+				list.style.left = newleft+'px';
+				if(newleft > 0){
+					newleft = -3000;
+					list.style.left = -3000+'px';
+				}
+				if(newleft < -3000){
+					newleft = 0;
+					list.style.left = 0+'px';
+				}
+
+			};
+
+
+			next.onclick = function(){
+				index += 1; 
+				if(index > btn.length){
+					index = 1;
+				}
+				slide(-1000);
+				showcircle();
+			};
+
+			prev.onclick = function(){
+				index -= 1; 
+				if(index < 1){
+					index = btn.length;
+				}
+				slide(1000);
+				showcircle();
+			}
+
+			function showcircle(){
+				for(var i =0 ;i<btn.length;i++){
+					if(btn[i].className == 'on')
+						btn[i].className = '';
+				}
+				btn[index-1].className = 'on' ;/*btn是一个数组，从0开始*/
+			}
+
+			for(var i =0;i<btn.length;i++){
+				btn[i].onclick = function(){
+					index  = parseInt(this.getAttribute('index'));
+					console.log(index);
+					showcircle();
+					var left = (index-1)*(-1000);
+					slide(left);
+				}
+			}
+
+			function play(){
+				time = setInterval(function(){
+					next.onclick();
+				},2000)
+			}
+
+			function stop(){
+				clearInterval(time);
+			}
+
+			container.onmouseover = stop;
+            container.onmouseout = play;
+
+            play();
+		}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="list" style=" left:0px;">
+			<img src="demo1.jpg" art="1">
+			<img src="demo2.jpg" art="2">
+			<img src="demo3.jpg" art="3">
+			<img src="demo4.jpg" art="4">
+		</div>
+
+		<div id="btn">
+			<span index='1' class="on"></span>
+			<span index='2' ></span>
+			<span index='3' ></span>
+			<span index='4' ></span>
+		</div>
+
+		<a href="javascript:;" id="prev" class="arraw">&#10094;</a>
+		<a href="javascript:;" id="next" class="arraw">&#10095;</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test4</title>
+</head>
+<body>
+	<h3><p id="myp">时间</p></h3>
+	<button onclick="test()">显示时间</button>
+</body>
+	<script type="text/javascript">
+		
+		function test(){
+			var p = document.getElementById("myp");
+			var date = new Date();
+			var hours = date.getHours();
+			var minutes = date.getMinutes();
+			var second = date.getSeconds();
+			// console.log(hours);
+			p.innerHTML = getdate(hours)+":"+getdate(minutes)+"::"+getdate(second);
+			setTimeout("test()",500);
+			function getdate(num){
+				var number;
+				if(num<10){
+					number = "0"+num;
+				}else{
+					number = num;
+				}
+				return number;
+
+			}
+		}
+		
+	</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test10</title>
+</head>
+	<style type="text/css">
+		*{margin: 0px;padding: 0px;}
+		body{
+			background: #000;
+			transform-style: preserve-3d;
+			animation: heart 6s infinite; 
+		}
+		@keyframes heart{
+			0%{
+				transform:rotateX(-10deg) rotateY(0deg);
+			}
+
+			100%{
+				transform: rotateX(-10deg) rotateY(360deg);
+			}
+		}
+		#heart{ 
+			height: 160px;
+			width: 100px; 
+			margin: 200px auto;
+			position: relative;
+		}
+		
+		.heart{
+			position: absolute;
+			left:0;
+			top:0;
+			border: 2px solid red; 
+			height: 160px;
+			width: 100px; 
+			margin: 200px auto;
+			border-bottom: 0;
+			border-left:0;
+			border-radius:50% 50% 0/40% 50% 0;
+			/*transform: rotate(45deg);*/
+		}
+
+	</style>
+<body>
+	<div id="heart"></div>
+</body>
+	<script type="text/javascript">
+		var heart = document.getElementById("heart");
+		for(var i = 0;i<36;i++){
+			var oDiv = document.createElement("div");
+			oDiv.className = "heart";
+			oDiv.style.transform = "rotateY("+i*10+"deg) rotateZ(45deg) translateX(30px)";
+			heart.appendChild(oDiv);
+		}
+	</script>
+</html>

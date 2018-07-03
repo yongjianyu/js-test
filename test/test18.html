@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test18</title>
+</head>
+	<style type="text/css">
+		.Grid {
+		  display: flex;
+		  background: rgb(255,255,255);
+		}
+
+		.Grid-cell {
+			margin: 3px;
+			flex: 1;
+			height: 50px;
+			background: rgb(244,243,240);
+		}
+
+		.col-2{
+			flex: 2;
+			background: rgb(244,243,240);
+			border: 1px solid black;
+		}
+
+		.col-8{
+			flex: 8;
+			background: rgb(244,243,240);
+			border: 1px solid black;
+		}
+	</style>
+<body>
+	<div class="Grid">
+	  <div class="Grid-cell">...</div>
+	  <div class="Grid-cell">...</div>
+	  <div class="Grid-cell">...</div>
+	  <div class="Grid-cell">...</div>
+	</div>
+
+	<div class="Grid">
+	  <div class="Grid-cell">...</div>
+	  <div class="Grid-cell">...</div>
+	</div>
+
+	<div class="Grid">
+	  <div class="col-2">...</div>
+	  <div class="col-8">...</div>
+	  <div class="col-2">...</div>
+	</div>
+</body>
+</html>

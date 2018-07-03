@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+</head>
+	<style type="text/css">
+		.bt{
+		    width: 100%;
+		    padding: 18px;
+		    border: none;
+		    text-align: left;
+		    font-size: 15px;
+		    color: #444;
+		}
+		.pane {
+			    padding: 0 18px;
+			    background-color: white;
+			    height: 0;
+			    overflow: hidden;
+			    border: solid green 1px;
+			}
+		.active {
+			background-color: #ddd;
+		}
+	</style>
+<body>
+	<button class="bt">菜单1</button>
+	<div class="pane"><p>Koala UI 是一套针对企业信息化管理软件的UI前端解决方案。提供一些常用组件的样式和脚本，目的在于提高前端开发人员的工作效率和更好的用户扩展体验. 提供了常用UI组件，包括手风琴、自动完成框、图片轮播、颜色...</p></div>
+	<button class="bt">菜单2</button>
+	<button class="bt">菜单3</button>
+</body>
+	<script type="text/javascript">
+		var bt = document.getElementsByClassName("bt");
+		console.log(bt[1]);
+		for(var i = 0;i<bt.length;i++){
+			bt[i].onclick = function(){
+				this.classList.toggle("active");
+				var pane = document.getElementsByClassName("pane");
+				// var pane = this.nextElementSibling;
+				console.log(pane.scrollHeight);
+				console.log(pane);
+			    if(pane[0].style.height){
+			    	pane[0].style.height = null;
+			    }else{
+			    	pane[0].style.height = pane[0].scrollHeight+"px";
+			    }
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body onload="checkcookie()">
+	<p id="p1">hello world</p>
+	<p id="p2" onclick="test(this)">hello world</p>
+	<input type="text" onchange="test2(this)">
+
+	<div id="div" onmouseover="test3(this)" onmouseout="test4(this);" onmousedown="test5(this)"
+	onmouseup="test6(this)" style="width: 100px;height: 100px;background: red;margin: 30px;"></div>
+</body>
+	<script type="text/javascript">
+		document.getElementById("p1").style.fontSize=20+"px";
+		function test(id){
+			id.style.color="blue";
+		}
+
+		function checkcookie(){
+			if(navigator.cookieEnabled == true){
+				console.log("cookie可用");
+			}else{
+				console.log("不可用");
+			}
+		}
+
+		function test2(text){
+			text.value = text.value.toUpperCase();
+		}
+
+		function test3(div){
+			div.innerHTML = " onmouseover";
+		}
+
+		function test4(div){
+			div.innerHTML = "onmouseout";
+		}
+
+		function test5(div){
+			div.style.background = "blue";
+		}
+
+		function test6(div){
+			div.style.background = "red";
+		}
+	</script>
+</html>

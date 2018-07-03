@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test9</title>
+</head>
+<body>
+	<p id="p" class="p1">this is a man</p>
+</body>
+	<script type="text/javascript">
+		var str = document.getElementById("p").innerHTML;
+		// console.log(str);
+		// var str2 = document.getElementsByClassName("p1").innerHTML;
+		// var str3 = document.getElementsByClassName("p1").innerHTML;
+		// console.log(str3);
+		var point = str.indexOf("is");
+		console.log(point);
+		document.cookie="user=root";
+		var x = document.cookie;
+		console.log(x);
+	</script>
+</html>

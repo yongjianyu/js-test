@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>验证码</title>
+	<script type="text/javascript">
+		function createCode(){
+			code = '';
+			var codelength = 4;
+			var checkCode = document.getElementById('checkCode');
+			var selectChar = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');
+			for(var i = 0;i<codelength;i++){
+				var charIndex = Math.floor(Math.random()*36);
+				code += selectChar[charIndex];
+			}
+
+			if(checkCode){
+				checkCode.className = 'code';
+				checkCode.value = code;
+			}
+
+			// alert(code);
+
+		}
+
+		function validate(){
+			var inputCode = document.getElementById('input1');
+			if(inputCode.length <= 0){
+				alert('请输入验证码！');
+				createCode();
+				return false;
+			}else if(inputCode != code){
+				alert("验证码输入错误");
+				createCode();
+				return false;
+			}else{
+				alert('yes');
+				return true;
+			}
+		}
+	</script>
+</head>
+	<style type="text/css">
+		.code{
+			background: url(demo4.jpg);
+			font-family: Arial;
+			color: red;
+			border: 0;
+			padding: 2px ,3px;
+			letter-spacing: 3px;
+			font-weight: border;
+		}
+
+		.unchanged{
+			border:0;
+		}
+	</style>
+<body onload="createCode()">
+	<form action="">
+		<input type="text" name="" id="input1">
+		<input type="text" name="" onclick="createCode()" readonly="readonly" id="checkCode"  class="unchanged" style="width: 80px;">
+		<input type="button" id="button1" onclick="validate()" value="确认">
+	</form>
+</body>
+</html>

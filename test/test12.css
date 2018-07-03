@@ -1,0 +1,152 @@
+*{margin: 0;padding: 0;}
+html{
+	font-family: ;
+}
+body{overflow-x:hidden; }
+
+
+/*
+适应版css开头
+ */
+ /**/
+ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
+input,textarea,select{*font-size:100%}
+
+ /**/
+
+.card{
+	margin: 10px;
+	padding: 50px;
+	background: #FFFFFF;
+	z-index: 1;
+	box-sizing: border-box;
+	}
+
+.content{
+	padding: 50px;
+	height: 200px;
+	background:#EEEBEB;
+}
+
+.header{
+	padding:0 50px;
+	margin: 0 30px;
+}
+.logo{
+	display: inline;
+	padding: auto auto;
+	width:75rem;
+}
+.tit{
+	display: inline;
+	padding: auto auto;
+	width: 25rem;
+}
+
+/*#nav{
+	font-size: 18px;
+}
+
+.nav li{
+	display: inline;
+	list-style: none;
+	cursor: pointer;
+}*/
+
+.nav-card{
+		padding: 0 10px;
+		margin: 0 50px; 
+	}
+	.nav{
+		height:30px;
+		background: #5C5353;
+		font-size: 21px;
+		box-sizing: border-box;
+	}
+
+	.nav li{
+		display: inline;
+		margin: 0 10px;
+		height: 100%;
+		width: 100%;
+		cursor: pointer;
+		list-style: none;
+		box-sizing: border-box;
+	}
+
+	.nav li:hover{
+		background: #2EF642;
+	}
+
+	.slideshow{
+		margin: auto ;
+	}
+
+	.link{
+		margin-left: 30px;
+		width: 75%;
+		-webkit-text-fill-color: #5C5858;
+	}
+
+	.title{
+		border-bottom: 1px solid #4B4444; 
+	}
+
+	.title p{
+		font-size: 30px;
+		color: #0E97AF;
+	}
+
+	
+	.link-v li{
+		display:inline-block;
+		margin: 20px 40px;
+		padding: auto; 
+
+	}
+
+	.link-v a{
+		text-decoration:none;
+		color: #6A75F6;
+	}
+
+	.footer{
+		width: 100%;
+		height: 50px;
+		background: #BCE0F7;
+	}
+	.footer p{
+		font-size: 18px;
+		color:#C1BBBB;
+	}
+
+	.po img{
+		margin: 0 20px;
+	}
+
+
+.row{width: 100%;}
+
+
+.left{float: left;}
+.right{float: right;}
+
+.d-none{display: none;}
+.d-inline{display: inline;}
+.d-block{display: block;}
+
+.m-0{margin:0;}
+.p-0{padding: 0;}
+
+.border{border:solid 1px #EBDEDE;}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test1</title>
+	<script type="text/javascript">
+		function test(){
+			var x = document.getElementById("mydiv");
+			var date = new Date();
+			var hours = date.getSeconds();
+			x.innerHTML = "seconds="+hours;
+			// setTimeout("test()",500);
+			var y = document.getElementById("myp");
+			y.innerHTML = "hello";
+			var text = document.getElementById("text");
+			if(text == "" || isNaN(text.value)){
+				alert("不是数字");
+			}
+			
+		}
+		document.write("123");
+
+		var people = {name:"yu",sex:"man",age:30};
+		console.log(people.name);
+	</script>
+</head>
+<body>
+	<p id="mydiv">这是一个段落</p>
+	<p id="myp">123</p>
+	<input type="text" id="text"/>
+	<button  type="button" onclick="test()">change</button>
+</body>
+</html>

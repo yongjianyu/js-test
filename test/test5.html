@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+	<script type="text/javascript">
+		function test(){
+			var text = document.forms["myform"]["text"].value;
+			if(text == ""|| text == null){
+				alert("输入错误");
+			}
+		}
+	</script>
+<body>
+	<form name="myform" onsubmit="return test();">
+		<input type="text" name="text">
+		<input type="submit" name="" value="提交">
+	</form>
+</body>
+</html>

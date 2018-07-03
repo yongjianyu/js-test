@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test8</title>
+</head>
+<body>
+	<div id="div">
+		<p id="p1">1</p>
+		<p>2</p>
+	</div>
+	<div id="mydiv"></div>
+</body>
+	<script type="text/javascript">
+		var p = document.createElement("p");
+		var text = document.createTextNode("3");
+		p.appendChild(text);
+		var div = document.getElementById("div");
+		div.appendChild(p);
+		var p1 = document.getElementById("p1");
+		div.replaceChild(p,p1);
+		// div.removeChild(p1);
+		// document.appendChild(p);
+	</script>
+</html>

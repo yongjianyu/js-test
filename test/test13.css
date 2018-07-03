@@ -1,0 +1,203 @@
+*{margin: 0;padding: 0;}
+html{width: 100%;}
+body{overflow-x: none;}
+
+.container{
+	padding: 10 30px;
+	position:relative;
+	width: 100%;
+}
+
+
+.nav{
+	padding-bottom: 20px;
+	margin-top: 95px;
+	border-bottom: solid 5px rgb(230,230,230);
+	font-size: 18px;
+
+}
+
+.menu li {
+	display: inline;
+	margin-left:45px; 
+}
+
+.menu a{
+	text-decoration: none;
+	color:rgb(174,174,174) ;
+}
+
+.active{
+	color:rgb(255, 88 ,66) !important;
+}
+
+
+.main1{
+	padding: 25px 0 0 60px;
+	float: left;
+	width: 60%;
+}
+
+.title{
+	border-bottom:solid 1px rgb(174,174,174);  
+}
+.title p{
+	margin-left: 3px;
+	/*float: left;*/
+	font-size: 25px;
+}
+
+.title img{
+	float: left;
+}
+
+.content{
+	margin: 0px 0 80px 0;
+	/*padding: 30px 0 20px 0;*/
+	/*border-bottom: 2px solid rgb(230,230,230);*/
+}
+
+.first{
+	margin-top:30px; 
+}
+.ct img{
+	float: left;
+
+}
+.act-tit p{
+	margin:0 0 15px 10px;
+	font-size: 20px;
+}
+.act-de p{
+	margin:15px 0 20px 10px;
+	display: inline;
+	color: rgb(174,174,174);
+	font-size: 12px;
+}
+.act-con {
+	margin: 20px 0 30px 10px;
+	font-size: 14px;
+}
+
+.read{
+	margin-left: 5px;
+	padding: auto;
+	width: 183px;
+	height: 45px;
+	font-size: 17px;
+	color: #FFFFFF;
+	background: rgb(255, 88 ,66);
+}
+
+.main2{
+	padding: 25px 0px 0 60px; 
+	float:left;
+	width: 30%;
+}
+
+.top img {
+	margin: 30px 5px 5px 5px;
+}
+.second img {
+	margin: 5px 5px 5px 5px;
+}
+.third img {
+	margin: 5px 5px 5px 5px;
+}
+.picture img{
+	margin: 5px 5px 5px 5px;
+}
+
+.label{
+	margin: 10px 0 0 0;
+}
+
+.table tr{
+	width: 149px;
+	height: 38px;
+	background: rgb(246,246,246);
+	font-size: 14px;
+	color: rgb(150,150,150);
+	margin:1px 1px 1px 1px; 
+}
+
+.img{
+	margin:2rem 0 0 5rem; 
+}
+
+.link{
+	padding: 10px 10px 10px 10px;
+	margin: 1rem auto;
+	width: 20rem;
+	text-align: center;
+}
+.link li{
+	margin: 0px 10px 0 10px;
+	width: 100px;
+	height: 47px;
+	display: inline;
+	list-style: none;
+	background: rgb(255,88,66);
+
+}
+
+.card{
+	/*padding: 0 5px 0 5px;*/
+	margin:  25px 10px 25px 10px;
+	
+}
+
+.card img{
+	float: left;
+}
+
+.fr{
+	font-size: 20px;
+}
+
+.se{
+	font-size: 14px;
+	color: rgb(174,174,174); 
+}
+
+.footer{
+	padding: 0  0 5rem;
+	float: left;
+	width: 100%;
+	background: rgb(34,47,53);
+}
+
+.about{
+	float: left;
+	width: 300px;
+	height: 200px;
+
+}
+.intro{
+	margin: 30px 0 0 0;
+	color: rgb(174,174,174);
+}
+
+
+.link2{
+	margin:0 0 0 10rem;
+	float: left;
+}
+
+.link2 p{
+	margin:0rem 0 1rem 10px; 
+	
+}
+
+.bottom{
+	float: left;
+	width: 100%;
+	background: rgb(23,33,37);
+	color: rgb(174,174,174);
+}
+
+
+
+
+/*常用css*/
+.border{border:solid  1px  rgb(174,174,174); }

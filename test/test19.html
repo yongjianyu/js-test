@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Holy Grail Layout</title>
+</head>
+	<style type="text/css">
+		@media (max-width: 768px) {
+		  .HolyGrail-body {
+		    flex-direction: column;
+		    flex: 1;
+		  }
+		  .HolyGrail-nav,
+		  .HolyGrail-ads,
+		  .HolyGrail-content {
+		    flex: auto;
+		  }
+		}
+
+		.Holy {
+		  display: flex;
+		  min-height: 100vh;
+		  flex-direction: column;
+		  background: rgb(255,255,255);
+		}
+
+		header,
+		footer {
+		  flex: 1;
+		  background: rgb(102,102,102);
+		}
+
+		.HolyGrail-body {
+		  display: flex;
+		  flex: 1;
+		}
+
+		.HolyGrail-content {
+		  flex: 1;
+		  background: rgb(214,214,214);
+		}
+
+		.HolyGrail-nav, .HolyGrail-ads {
+		  /* 两个边栏的宽度设为12em */
+		  flex: 0 0 15em;
+		  background: rgb(255,102,55);
+		}
+
+		.HolyGrail-nav {
+		  /* 导航放到最左边 */
+		  order: -1;
+		  background: rgb(119,187,211);
+		}
+	</style>
+<body class="Holy">
+	<header>#header</header>
+  	<div class="HolyGrail-body">
+   		<main class="HolyGrail-content">middle</main>
+    	<nav class="HolyGrail-nav">left</nav>
+    	<aside class="HolyGrail-ads">right</aside>
+  	</div>
+  	<footer>#footer</footer>
+</body>
+</html>

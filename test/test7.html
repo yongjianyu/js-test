@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test7</title>
+</head>
+<body>
+	<button id="btn">点击</button>
+	<p id="p1">显示时间</p>
+	<p id="p2">456</p>
+</body>
+	<script type="text/javascript">
+		document.getElementById("btn").addEventListener("click",displaydate);
+		function displaydate(){
+			document.getElementById("p1").innerHTML = Date();
+		}
+
+		window.addEventListener("resize",
+			function(){document.getElementById("p2").innerHTML = "123";}
+			)
+	</script>
+</html>

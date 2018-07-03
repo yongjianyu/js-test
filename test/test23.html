@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>瀑布流</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}  
+		#wrap{
+			width: 840px;
+			margin: 0 auto;
+			border: 1px solid black;
+			overflow: hidden;
+		}
+		#wrap ul{
+			width: 200px;
+			margin: 0 5px;
+			float: left;
+		}
+		#wrap ul li{
+			width: 200px;
+			list-style: none;
+			margin: 10px 0;
+			background: palegreen;
+			font-size: 50px;
+			color: white;
+			text-align: center;
+		}
+	</style>
+
+	<script type="text/javascript">
+		var wrap=document.querySelector("#wrap");
+		var ul=document.querySelectorAll("#wrap ul");//声明元素块
+		//先创建一个随机数的函数
+		function ranDom(min,max){
+		  return Math.random()*(max-min+1)+min;
+		}
+		//再创建一个添加li的函数
+		function createLi(num){
+		  for(var i=0;i<num;i++){
+		    var newLi=document.createElement("li");//创建li
+		    newLi.style.height=ranDom(100,400)+"px";//使用随机数函数创建高度不同的li
+		    var arrul=[];
+		//将ul的高度进行储存和比较
+		    for(var j=0;j<ul.length;j++){
+		      arrul.push(ul[j].offsetHeight);//储存ul的高度
+		    }
+		    var minHeight=arrul[0];
+		    var minIndex=0;
+		    for(var k=0;k<arrul.length;k++){
+		      if(minHeight>arrul[k]){
+		        minHeight=arrul[k];//比较出高度最短的ul然后赋值给minHeight
+		        minIndex=k;//把高度最短的ul所在下标赋值给minIndex
+		      }
+		    }
+		  ul[minIndex].appendChild(newLi);//向高度最短的ul里添加li
+		  }  
+		}
+		createLi(15);//执行函数，添加15个li，
+		//创建一个滚动事件
+		window.onscroll=function(){ 
+		// html总高度-可视化窗口高度=body的滚动高度
+		//兼容写法 
+		  var scrollTop=document.body.scrollTop; 
+		  var clientHeight=document.documentElement.clientHeight||document.body.clientHeight||window.innerHeight; 
+		  if(document.documentElement.offsetHeight-clientHeight<=scrollTop){ 
+		    createLi(15); 
+		  } 
+		}
+		//当滚动快要到达底部,还没有到达的时候,再去执行函数,创建新的li 
+
+	</script>
+</head>
+<body>
+	<div id="wrap">
+	  <ul></ul>
+	  <ul></ul>
+	  <ul></ul>
+	  <ul></ul>
+	</div>
+</body>
+</html>

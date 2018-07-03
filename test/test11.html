@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<style type="text/css">
+		*{margin:0;padding: 0;}
+		#cube{
+			position: relative;
+			height: 200px;
+			width: 200px;
+			margin: 300px auto;
+			transform-style: 
+
+		}
+
+		#cube div{
+			position: absolute;
+			left: 0;
+			top: 0;
+			border: 2px solid red;
+			width: 200px;
+			height: 200px;
+		}
+
+		#cube div:nth-child(1){
+			top:-202px:buttom; 
+			transform: rotateX(90deg);
+
+		}
+		#cube div:nth-child(2){
+			top:202px;
+			
+		}
+		#cube div:nth-child(3){
+			left:-202px;
+			
+		}
+		#cube div:nth-child(4){
+			left:202px;
+			
+		}
+	</style>
+<body>
+	<div id="cube">
+		<div>上</div>
+		<div>下</div>
+		<div>左</div>
+		<div>右</div>
+		<div>前</div>
+		<div>后</div>
+	</div>
+</body>
+</html>

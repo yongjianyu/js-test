@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<link rel="stylesheet" type="text/css" href="clickmenusearch.css">
+	<script type="text/javascript" src="clickmenusearch.js"></script>
+<body>
+	<!--JS/CSS 下拉菜单可进行搜索/过滤操作-->
+	<h2>搜索/过滤</h2>
+<p>点击按钮显示下拉菜单，输入框可以搜索过滤内容。</p>
+
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">下拉菜单</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="搜索.." id="myInput" onkeyup="filterFunction()">
+    <a href="#about">About</a>
+    <a href="#base">Base</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="#custom">Custom</a>
+    <a href="#support">Support</a>
+    <a href="#tools">Tools</a>
+  </div>
+</div>
+</body>
+</html>

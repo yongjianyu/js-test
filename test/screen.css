@@ -1,0 +1,99 @@
+/*
+	面板的不同屏幕适配
+ */
+
+@media (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+@media (min-width: 768px) {
+  .container {
+	max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+	max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+	max-width: 1140px;
+  }
+}
+
+
+
+.left{float: left;}
+.right{float: right;}
+
+.d-none{display: none !important;}
+.d-block{display: block !important;}
+.d-inline-block{display: inline-block !important;}
+
+.w-25{width: 25rem;}
+.w-50{width: 50rem;}
+.w-75{width: 75rem;}
+.w-100{width: 100rem;}
+
+.mw-25{max-width: 25rem;}
+.mw-50{max-width: 50rem;}
+.mw-75{max-width: 75rem;}
+.mw-100{max-width: 100rem;}
+
+@media (min-width: 576px) {
+	.d-sm-none{display: none !important;}
+	.d-sm-block{display: block !important;}
+	.d-sm-inline-block{display: inline-block !important;}
+
+	.mw-sm-25{max-width: 25rem;}
+	.mw-sm-50{max-width: 50rem;}
+	.mw-sm-75{max-width: 75rem;}
+	.mw-sm-100{max-width: 100rem;}
+}
+
+@media (min-width: 768px) {
+  	.d-md-none{display: none !important;}
+	.d-md-block{display: block !important;}
+	.d-md-inline-block{display: inline-block !important;}
+
+	.mw-md-25{max-width: 25rem;}
+	.mw-md-50{max-width: 50rem;}
+	.mw-md-75{max-width: 75rem;}
+	.mw-md-100{max-width: 100rem;}
+}
+
+@media (min-width: 992px) {
+  	.d-lg-none{display: none !important;}
+  	.d-lg-block{display: block !important;}
+  	.d-lg-inline-block{display: inline-block !important;}
+
+  	.mw-lg-25{max-width: 25rem;}
+	.mw-lg-50{max-width: 50rem;}
+	.mw-lg-75{max-width: 75rem;}
+	.mw-lg-100{max-width: 100rem;}
+}
+
+@media (min-width: 1200px) {
+  	.d-xl-none{display: none !important;}
+  	.d-sm-block{display: block !important;}
+  	.d-xl-inline-block{display: inline-block !important;}
+
+  	.mw-xl-25{max-width: 25rem;}
+	.mw-xl-50{max-width: 50rem;}
+	.mw-xl-75{max-width: 75rem;}
+	.mw-xl-100{max-width: 100rem;}
+}
+
+
+/*
+	width
+ */
+
+
+
+
